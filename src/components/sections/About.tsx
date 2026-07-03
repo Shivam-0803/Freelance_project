@@ -6,10 +6,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const points = [
-  "Hands-on ownership — the Nichols family is on every job",
-  "Well-maintained dozers, tractors, and land-moving equipment",
-  "Honest, straightforward communication from quote to completion",
-  "Deep familiarity with Mississippi clay, terrain, and drainage",
+  "Nichols family on every job — no subcontractors",
+  "Well-maintained dozers, tractors & equipment",
+  "Honest quotes, straightforward communication",
 ];
 
 export function About() {
@@ -48,22 +47,13 @@ export function About() {
             className="mx-0"
           />
           <Reveal delay={0.1}>
-            <p className="mt-6 text-base leading-relaxed text-muted">
-              Nichols and Sons Construction is a family-owned excavation and
-              land clearing company based in Canton, Mississippi. We take on
-              everything from clearing overgrown acreage to grading a house
-              pad, leveling farmland, hauling dirt, and building ponds — the
-              kind of dirt work that has to be done right the first time.
+            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+              Family-owned excavation and land clearing in Canton, Mississippi.
+              We run the equipment ourselves and treat every property like
+              it&apos;s our own.
             </p>
           </Reveal>
           <Reveal delay={0.18}>
-            <p className="mt-4 text-base leading-relaxed text-muted">
-              We show up, run the equipment ourselves, and treat every
-              property like it&apos;s our own. That&apos;s the difference a
-              family-owned crew makes.
-            </p>
-          </Reveal>
-          <Reveal delay={0.26}>
             <ul className="mt-8 space-y-3.5">
               {points.map((point) => (
                 <li key={point} className="flex items-start gap-3">

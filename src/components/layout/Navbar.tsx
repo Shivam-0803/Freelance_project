@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Phone, X } from "lucide-react";
 import * as React from "react";
 
-import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { links, site } from "@/data/site";
@@ -67,7 +66,6 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ThemeToggle />
           <Button asChild size="sm">
             <a href={links.tel}>
               <Phone className="h-4 w-4" />
@@ -77,7 +75,6 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <ThemeToggle />
           <button
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-bone"
             onClick={() => setOpen((o) => !o)}

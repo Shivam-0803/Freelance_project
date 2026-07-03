@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
-  /* Dark "ironwork" surface — used for nav, hero, why-us, hours/contact, footer */
-  --ink: oklch(16% 0.015 50);
-  --ink-soft: oklch(21% 0.02 50);
+  /* "Ironwork" surface — used for nav, hero, why-us, hours/contact, footer */
+  --ink: oklch(10% 0.012 50);
+  --ink-soft: oklch(16% 0.016 50);
   --ink-line: oklch(100% 0 0 / 0.1);
   --bone: oklch(96% 0.012 80);
   --bone-dim: oklch(96% 0.012 80 / 0.65);
@@ -18,33 +16,7 @@
   --clay: oklch(56% 0.15 40);
   --clay-deep: oklch(46% 0.14 38);
 
-  /* Light "paper" surfaces — used for body sections */
-  --paper: oklch(98.2% 0.004 75);
-  --surface: oklch(95.5% 0.008 70);
-  --card: oklch(100% 0 0);
-  --border: oklch(90% 0.008 65);
-  --muted: oklch(46% 0.02 55);
-  --heading: oklch(17% 0.02 50);
-
-  --shadow-soft: 0 1px 2px oklch(15% 0.02 50 / 0.05), 0 6px 16px -8px oklch(15% 0.02 50 / 0.12);
-  --shadow-bold: 0 24px 60px -18px oklch(15% 0.02 50 / 0.4);
-  --shadow-accent: 0 14px 34px -10px oklch(80% 0.17 78 / 0.55);
-
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
-  --radius-2xl: 2rem;
-}
-
-/* Dark mode — the whole page shifts to the ironwork palette; the always-dark
-   "ink" sections (nav, hero, why-us, contact, footer) simply deepen a touch
-   so there's still tonal separation between surfaces. */
-.dark {
-  --ink: oklch(10% 0.012 50);
-  --ink-soft: oklch(16% 0.016 50);
-  --ink-line: oklch(100% 0 0 / 0.1);
-
+  /* Dark surfaces used for body sections */
   --paper: oklch(15% 0.016 50);
   --surface: oklch(18.5% 0.018 50);
   --card: oklch(21% 0.02 50);
@@ -54,6 +26,13 @@
 
   --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 20px -10px rgb(0 0 0 / 0.6);
   --shadow-bold: 0 24px 70px -18px rgb(0 0 0 / 0.75);
+  --shadow-accent: 0 14px 34px -10px oklch(80% 0.17 78 / 0.55);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
 }
 
 @theme inline {
@@ -138,17 +117,13 @@
 
 html {
   scroll-behavior: auto;
+  color-scheme: dark;
 }
 
 body {
   background: var(--paper);
   color: var(--heading);
   font-feature-settings: "ss01" on, "cv11" on;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.dark {
-  color-scheme: dark;
 }
 
 /* Signature "fabricated plate" corner cut, used on primary CTAs */
@@ -161,6 +136,14 @@ body {
     14px 100%,
     0 calc(100% - 14px)
   );
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .cut-corner-sm {

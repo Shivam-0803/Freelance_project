@@ -36,7 +36,7 @@ export function ServiceArea() {
               height="440"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="block w-full grayscale-[15%] dark:brightness-[0.87] dark:invert-[0.92] dark:hue-rotate-180"
+              className="block w-full brightness-[0.87] invert-[0.92] hue-rotate-180"
             />
           </div>
         </Reveal>
