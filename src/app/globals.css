@@ -1,26 +1,211 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark "ironwork" surface — used for nav, hero, why-us, hours/contact, footer */
+  --ink: oklch(16% 0.015 50);
+  --ink-soft: oklch(21% 0.02 50);
+  --ink-line: oklch(100% 0 0 / 0.1);
+  --bone: oklch(96% 0.012 80);
+  --bone-dim: oklch(96% 0.012 80 / 0.65);
+
+  /* Accent — CAT-yellow amber (matches the equipment in our photos) */
+  --amber: oklch(80% 0.17 78);
+  --amber-deep: oklch(66% 0.16 68);
+
+  /* Secondary accent — Mississippi red-clay rust */
+  --clay: oklch(56% 0.15 40);
+  --clay-deep: oklch(46% 0.14 38);
+
+  /* Light "paper" surfaces — used for body sections */
+  --paper: oklch(98.2% 0.004 75);
+  --surface: oklch(95.5% 0.008 70);
+  --card: oklch(100% 0 0);
+  --border: oklch(90% 0.008 65);
+  --muted: oklch(46% 0.02 55);
+  --heading: oklch(17% 0.02 50);
+
+  --shadow-soft: 0 1px 2px oklch(15% 0.02 50 / 0.05), 0 6px 16px -8px oklch(15% 0.02 50 / 0.12);
+  --shadow-bold: 0 24px 60px -18px oklch(15% 0.02 50 / 0.4);
+  --shadow-accent: 0 14px 34px -10px oklch(80% 0.17 78 / 0.55);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+/* Dark mode — the whole page shifts to the ironwork palette; the always-dark
+   "ink" sections (nav, hero, why-us, contact, footer) simply deepen a touch
+   so there's still tonal separation between surfaces. */
+.dark {
+  --ink: oklch(10% 0.012 50);
+  --ink-soft: oklch(16% 0.016 50);
+  --ink-line: oklch(100% 0 0 / 0.1);
+
+  --paper: oklch(15% 0.016 50);
+  --surface: oklch(18.5% 0.018 50);
+  --card: oklch(21% 0.02 50);
+  --border: oklch(100% 0 0 / 0.1);
+  --muted: oklch(72% 0.018 70);
+  --heading: var(--bone);
+
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 20px -10px rgb(0 0 0 / 0.6);
+  --shadow-bold: 0 24px 70px -18px rgb(0 0 0 / 0.75);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-line: var(--ink-line);
+  --color-bone: var(--bone);
+  --color-bone-dim: var(--bone-dim);
+  --color-amber: var(--amber);
+  --color-amber-deep: var(--amber-deep);
+  --color-clay: var(--clay);
+  --color-clay-deep: var(--clay-deep);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-heading: var(--heading);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-oswald);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 36s linear infinite;
+  --animate-kenburns: kenburns 16s ease-out forwards;
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1) translate3d(0, -1%, 0);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: auto;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--heading);
+  font-feature-settings: "ss01" on, "cv11" on;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Signature "fabricated plate" corner cut, used on primary CTAs */
+.cut-corner {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 14px) 0,
+    100% 14px,
+    100% 100%,
+    14px 100%,
+    0 calc(100% - 14px)
+  );
+}
+
+.cut-corner-sm {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 9px) 0,
+    100% 9px,
+    100% 100%,
+    9px 100%,
+    0 calc(100% - 9px)
+  );
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom scrollbar for a slightly more premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
