@@ -21,7 +21,7 @@ export function ServiceArea() {
               key={area}
               className="flex items-center gap-2.5 rounded-lg border border-border bg-card px-4 py-3 shadow-[var(--shadow-soft)]"
             >
-              <MapPin className="h-4 w-4 text-clay" />
+              <MapPin className="h-4 w-4 text-amber-deep" />
               <span className="text-sm font-semibold text-heading">{area}</span>
             </div>
           ))}

@@ -42,13 +42,12 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-us" className="bg-ink py-20 text-bone sm:py-28">
+    <section id="why-us" className="bg-white py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Why Nichols &amp; Sons"
           title="Dirt Work You Can Count On"
           subtitle="We're a small, hard-working Mississippi crew. No call centers, no middlemen — when you call, you talk to the people running the equipment."
-          tone="dark"
         />
 
         <Stagger className="mt-14 flex flex-wrap justify-center gap-6" stagger={0.08}>
@@ -58,15 +57,15 @@ export function WhyChooseUs() {
               <motion.div
                 key={reason.title}
                 variants={staggerItem}
-                className="w-full rounded-2xl border border-ink-line bg-ink-soft p-7 transition-colors duration-300 hover:border-amber/40 sm:w-[46%] lg:w-[30%]"
+                className="w-full rounded-2xl border border-ink/10 bg-white p-7 shadow-[var(--shadow-soft)] transition-colors duration-300 hover:border-amber-deep/40 sm:w-[46%] lg:w-[30%]"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-amber/15 text-amber">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-amber-deep/15 text-amber-deep">
                   <Icon className="h-6 w-6" strokeWidth={1.75} />
                 </div>
-                <h3 className="mt-5 font-heading text-lg font-bold uppercase tracking-tight text-bone">
+                <h3 className="mt-5 font-heading text-lg font-bold uppercase tracking-tight text-ink">
                   {reason.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-bone-dim">
+                <p className="mt-2.5 text-sm leading-relaxed text-ink/65">
                   {reason.description}
                 </p>
               </motion.div>

@@ -10,7 +10,7 @@ import { services } from "@/data/services";
 
 export function Services() {
   return (
-    <section id="services" className="bg-surface py-20 sm:py-28">
+    <section id="services" className="bg-white py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="What We Do"
@@ -29,7 +29,7 @@ export function Services() {
                 key={service.slug}
                 id={`service-${service.slug}`}
                 variants={staggerItem}
-                className="group scroll-mt-28 overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[var(--shadow-bold)]"
+                className="group scroll-mt-28 overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-[var(--shadow-soft)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[var(--shadow-bold)]"
               >
                 <div className="relative h-44 overflow-hidden">
                   <Image
@@ -43,13 +43,13 @@ export function Services() {
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
                 </div>
                 <div className="relative px-6 pb-6 pt-8">
-                  <div className="absolute -top-6 right-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-amber text-ink shadow-md ring-4 ring-card">
+                  <div className="absolute -top-6 right-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-amber text-ink shadow-md ring-4 ring-white">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </div>
-                  <h3 className="pr-10 font-heading text-base font-bold uppercase tracking-tight text-heading">
+                  <h3 className="pr-10 font-heading text-base font-bold uppercase tracking-tight text-ink">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                  <p className="mt-2 text-sm leading-relaxed text-ink/65">
                     {service.description}
                   </p>
                 </div>

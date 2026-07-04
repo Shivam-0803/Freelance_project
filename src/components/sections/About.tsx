@@ -57,7 +57,7 @@ export function About() {
             <ul className="mt-8 space-y-3.5">
               {points.map((point) => (
                 <li key={point} className="flex items-start gap-3">
-                  <CircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-clay" />
+                  <CircleCheck className="mt-0.5 h-5 w-5 shrink-0 text-amber-deep" />
                   <span className="text-sm text-heading/90 sm:text-base">
                     {point}
                   </span>

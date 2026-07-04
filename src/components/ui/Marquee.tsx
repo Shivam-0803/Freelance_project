@@ -8,7 +8,7 @@ export function Marquee({
 }: {
   items: string[];
   className?: string;
-  tone?: "ink" | "clay";
+  tone?: "ink" | "amber";
   reverse?: boolean;
 }) {
   const doubled = [...items, ...items];
@@ -17,7 +17,7 @@ export function Marquee({
     <div
       className={cn(
         "group relative w-full overflow-hidden py-2.5",
-        tone === "ink" ? "bg-ink text-bone-dim" : "bg-clay text-bone",
+        tone === "ink" ? "bg-ink text-bone-dim" : "bg-amber-deep text-ink",
         className
       )}
       aria-hidden="true"

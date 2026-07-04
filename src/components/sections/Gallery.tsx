@@ -116,7 +116,7 @@ export function Gallery() {
               type="button"
               onClick={goPrev}
               aria-label="Scroll gallery left"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-heading transition hover:border-clay hover:text-clay"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-heading transition hover:border-amber-deep hover:text-amber-deep"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -124,7 +124,7 @@ export function Gallery() {
               type="button"
               onClick={goNext}
               aria-label="Scroll gallery right"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-heading transition hover:border-clay hover:text-clay"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-heading transition hover:border-amber-deep hover:text-amber-deep"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

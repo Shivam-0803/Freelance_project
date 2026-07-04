@@ -10,12 +10,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-amber text-ink shadow-[var(--shadow-accent)] hover:-translate-y-0.5 hover:bg-amber-deep focus-visible:ring-offset-ink",
+          "bg-amber text-ink shadow-[var(--shadow-accent)] hover:-translate-y-0.5 hover:bg-amber-bright focus-visible:ring-offset-ink",
         outline:
           "rounded-md border border-white/25 bg-transparent text-bone hover:-translate-y-0.5 hover:border-amber hover:text-amber focus-visible:ring-offset-ink",
         outlineDark:
-          "rounded-md border border-heading/15 bg-transparent text-heading hover:-translate-y-0.5 hover:border-clay hover:text-clay",
-        ghost: "rounded-md text-heading hover:text-clay",
+          "rounded-md border border-heading/15 bg-transparent text-heading hover:-translate-y-0.5 hover:border-amber-deep hover:text-amber-deep",
+        ghost: "rounded-md text-heading hover:text-amber-deep",
         dark: "rounded-md bg-ink text-bone hover:-translate-y-0.5 hover:bg-ink-soft",
       },
       size: {

@@ -30,13 +30,13 @@ export function SectionHeading({
             "inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.25em]",
             tone === "dark"
               ? "border-amber/30 bg-amber/10 text-amber"
-              : "border-clay/25 bg-clay/[0.06] text-clay"
+              : "border-amber-deep/30 bg-amber-deep/10 text-amber-deep"
           )}
         >
           <span
             className={cn(
               "h-1.5 w-1.5 rounded-full",
-              tone === "dark" ? "bg-amber" : "bg-clay"
+              tone === "dark" ? "bg-amber" : "bg-amber-deep"
             )}
           />
           {eyebrow}
@@ -46,7 +46,7 @@ export function SectionHeading({
         <h2
           className={cn(
             "mt-4 font-heading text-3xl font-bold uppercase leading-[1.05] tracking-tight text-balance sm:text-4xl",
-            tone === "dark" ? "text-bone" : "text-heading"
+            tone === "dark" ? "text-bone" : "text-ink"
           )}
         >
           {title}
@@ -57,7 +57,7 @@ export function SectionHeading({
           <p
             className={cn(
               "mt-4 text-base leading-relaxed",
-              tone === "dark" ? "text-bone-dim" : "text-muted"
+              tone === "dark" ? "text-bone-dim" : "text-ink/65"
             )}
           >
             {subtitle}

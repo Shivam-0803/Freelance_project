@@ -41,7 +41,7 @@ export function ServiceButtons() {
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 inline-flex items-center gap-1.5 font-heading text-xs font-bold uppercase tracking-[0.2em] text-clay">
+                <div className="mt-6 inline-flex items-center gap-1.5 font-heading text-xs font-bold uppercase tracking-[0.2em] text-amber-deep">
                   Learn more
                   <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>

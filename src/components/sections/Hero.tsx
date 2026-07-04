@@ -25,30 +25,23 @@ export function Hero() {
       className="relative isolate flex min-h-[100svh] flex-col justify-center overflow-hidden bg-ink text-bone"
     >
       <div className="absolute inset-0 -z-20 overflow-hidden">
-        <motion.div
-          className="relative h-full w-full"
-          initial={{ scale: 1.12 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 18, ease: "easeOut" }}
-        >
-          <Image
-            src="/images/gallery/excavation-cat-dozer-cut-01.jpg"
-            alt="Bulldozer cutting a grade bank on an excavation site in Canton, Mississippi"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-        </motion.div>
+        <Image
+          src="/images/nichols-and-sons-construction-excavation-contractor-canton-ms-hero-img.png"
+          alt="Nichols and Sons Construction excavation contractor serving Canton, Mississippi"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
       </div>
 
-      {/* Dark overlay for text legibility */}
+      {/* Dark overlay for text legibility — reduced ~60% for a brighter hero image */}
       <div
         className="absolute inset-0 -z-10"
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(110% 90% at 78% 20%, oklch(18% 0.02 55 / 0.35) 0%, oklch(10% 0.015 50 / 0.88) 55%, oklch(8% 0.01 50 / 0.97) 100%), linear-gradient(180deg, transparent 45%, var(--ink) 100%)",
+            "radial-gradient(110% 90% at 78% 20%, oklch(18% 0.02 55 / 0.14) 0%, oklch(10% 0.015 50 / 0.35) 55%, oklch(8% 0.01 50 / 0.39) 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
         }}
       />
 
@@ -144,7 +137,7 @@ export function Hero() {
               Text Us
             </a>
           </Button>
-          <Button asChild variant="ghost" size="lg">
+          <Button asChild variant="primary" size="lg">
             <a href="#services">View Services</a>
           </Button>
         </motion.div>

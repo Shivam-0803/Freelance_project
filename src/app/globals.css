@@ -8,13 +8,12 @@
   --bone: oklch(96% 0.012 80);
   --bone-dim: oklch(96% 0.012 80 / 0.65);
 
-  /* Accent — CAT-yellow amber (matches the equipment in our photos) */
+  /* Brand yellow — primary, hover, and secondary shades only */
   --amber: oklch(80% 0.17 78);
+  --amber-bright: oklch(86% 0.18 78);
   --amber-deep: oklch(66% 0.16 68);
-
-  /* Secondary accent — Mississippi red-clay rust */
-  --clay: oklch(56% 0.15 40);
-  --clay-deep: oklch(46% 0.14 38);
+  --clay: oklch(58% 0.15 72);
+  --clay-deep: oklch(50% 0.14 70);
 
   /* Dark surfaces used for body sections */
   --paper: oklch(15% 0.016 50);
@@ -42,6 +41,7 @@
   --color-bone: var(--bone);
   --color-bone-dim: var(--bone-dim);
   --color-amber: var(--amber);
+  --color-amber-bright: var(--amber-bright);
   --color-amber-deep: var(--amber-deep);
   --color-clay: var(--clay);
   --color-clay-deep: var(--clay-deep);

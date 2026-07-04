@@ -1,0 +1,5 @@
+Apply client color revisions and add hero background image
+
+Replace orange accents with yellow-only palette, switch three sections
+to white backgrounds, lighten the hero overlay, remove hero scale
+animation, make View Services yellow, and add the Canton MS hero PNG.

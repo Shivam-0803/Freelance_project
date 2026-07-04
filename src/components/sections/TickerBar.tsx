@@ -14,5 +14,5 @@ const tickerItems = [
 ];
 
 export function TickerBar() {
-  return <Marquee items={tickerItems} tone="clay" reverse />;
+  return <Marquee items={tickerItems} tone="amber" reverse />;
 }
