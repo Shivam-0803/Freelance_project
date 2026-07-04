@@ -35,13 +35,13 @@ export function Hero() {
         />
       </div>
 
-      {/* Dark overlay for text legibility — reduced ~60% for a brighter hero image */}
+      {/* Overlays for text legibility — left radial + bottom fade */}
       <div
         className="absolute inset-0 -z-10"
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(110% 90% at 78% 20%, oklch(18% 0.02 55 / 0.14) 0%, oklch(10% 0.015 50 / 0.35) 55%, oklch(8% 0.01 50 / 0.39) 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
+            "radial-gradient(circle at left center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.18) 65%, transparent 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
         }}
       />
 
@@ -109,7 +109,7 @@ export function Hero() {
         </h1>
 
         <motion.p
-          className="mt-6 max-w-xl text-base leading-relaxed text-bone-dim sm:text-lg"
+          className="mt-6 max-w-xl text-base leading-relaxed text-white sm:text-lg"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.65, ease: easing }}

@@ -38,16 +38,20 @@ export function Navbar() {
           : "border-transparent bg-ink/70 backdrop-blur-sm"
       }`}
     >
-      <Container className="flex h-[4.5rem] items-center justify-between py-3 sm:h-20">
-        <a href="#top" className="flex items-center gap-3" aria-label={`${site.name} home`}>
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-amber font-heading text-sm font-bold tracking-tight text-ink shadow-[var(--shadow-accent)] sm:h-12 sm:w-12">
+      <Container className="flex min-h-[3.75rem] items-center justify-between pt-2 pb-2.5 sm:h-20 sm:py-3">
+        <a
+          href="#top"
+          className="flex min-w-0 flex-1 items-center gap-2.5 sm:flex-initial sm:gap-3"
+          aria-label={`${site.name} home`}
+        >
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber font-heading text-sm font-bold tracking-tight text-ink shadow-[var(--shadow-accent)] sm:h-12 sm:w-12">
             N&amp;S
           </span>
-          <span className="hidden sm:block">
-            <span className="block font-heading text-base font-bold uppercase leading-tight tracking-tight text-bone">
+          <span className="min-w-0">
+            <span className="block truncate font-heading text-sm font-bold uppercase leading-tight tracking-tight text-bone sm:text-base">
               Nichols &amp; Sons
             </span>
-            <span className="block text-[10px] uppercase tracking-[0.25em] text-amber">
+            <span className="block text-[9px] uppercase tracking-[0.22em] text-amber sm:text-[10px] sm:tracking-[0.25em]">
               Construction
             </span>
           </span>
@@ -74,7 +78,7 @@ export function Navbar() {
           </Button>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex shrink-0 items-center gap-2 lg:hidden">
           <button
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-bone"
             onClick={() => setOpen((o) => !o)}
