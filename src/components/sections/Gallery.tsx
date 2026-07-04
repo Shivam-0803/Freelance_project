@@ -110,13 +110,14 @@ export function Gallery() {
             eyebrow="Featured Projects"
             title="Real Jobs, Real Dirt, Real Results"
             subtitle="Every project photo we have — land clearing, site prep, land leveling, pond building, and more from across Canton, Mississippi."
+            tone="dark"
           />
           <div className="mb-1 hidden shrink-0 items-center gap-2 sm:flex">
             <button
               type="button"
               onClick={goPrev}
               aria-label="Scroll gallery left"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-heading transition hover:border-amber-deep hover:text-amber-deep"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-ink-soft text-bone transition hover:border-amber hover:text-amber"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -124,7 +125,7 @@ export function Gallery() {
               type="button"
               onClick={goNext}
               aria-label="Scroll gallery right"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-heading transition hover:border-amber-deep hover:text-amber-deep"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-ink-soft text-bone transition hover:border-amber hover:text-amber"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

@@ -44,6 +44,7 @@ export function About() {
             eyebrow="Our Story"
             title="A Family-Owned Excavation Company Built on Trust"
             align="left"
+            tone="dark"
             className="mx-0"
           />
           <Reveal delay={0.1}>

@@ -13,6 +13,7 @@ export function ServiceArea() {
           eyebrow="Where We Work"
           title="Proudly Serving Canton, Mississippi"
           subtitle={`Based in ${site.location.display} — we take on land clearing, excavation, and dirt work throughout ${site.location.region} and the surrounding communities.`}
+          tone="dark"
         />
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
