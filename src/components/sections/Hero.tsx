@@ -22,7 +22,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[100svh] flex-col justify-center overflow-hidden bg-ink text-bone"
+      className="relative isolate flex min-h-[100svh] flex-col justify-center overflow-hidden bg-transparent text-bone"
     >
       <div className="absolute inset-0 -z-20 overflow-hidden">
         <Image
@@ -35,13 +35,13 @@ export function Hero() {
         />
       </div>
 
-      {/* Overlays for text legibility — top/nav blend, left radial, bottom fade */}
+      {/* Overlays — nav blend (top), left radial, bottom fade; single layer, no seam */}
       <div
         className="absolute inset-0 -z-10"
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 14%), radial-gradient(circle at left center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.18) 65%, transparent 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
+            "linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 6%, rgba(0,0,0,0.35) 14%, transparent 24%), radial-gradient(circle at left center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.18) 65%, transparent 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
         }}
       />
 
