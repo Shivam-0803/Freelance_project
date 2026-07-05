@@ -48,7 +48,7 @@ export function Navbar() {
             N&amp;S
           </span>
           <span className="min-w-0">
-            <span className="block truncate font-heading text-sm font-bold uppercase leading-tight tracking-tight text-bone sm:text-base">
+            <span className="block font-heading text-sm font-bold uppercase leading-tight tracking-tight text-bone sm:text-base">
               Nichols &amp; Sons
             </span>
             <span className="block text-[9px] uppercase tracking-[0.22em] text-amber sm:text-[10px] sm:tracking-[0.25em]">
