@@ -19,25 +19,9 @@ const navLinks = [
 
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
-
-  React.useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > 12);
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
-        scrolled
-          ? "border-ink-line bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/85"
-          : "border-transparent bg-ink/70 backdrop-blur-sm"
-      }`}
-    >
+    <header className="sticky top-0 z-50 border-b border-ink-line bg-ink">
       <Container className="flex min-h-[3.75rem] items-center justify-between pt-2 pb-2.5 sm:h-20 sm:py-3">
         <a
           href="#top"
