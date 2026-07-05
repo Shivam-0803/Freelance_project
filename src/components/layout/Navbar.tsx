@@ -19,9 +19,31 @@ const navLinks = [
 
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 48);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink-line bg-ink">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color] duration-300 ${
+        scrolled ? "border-b border-ink-line bg-ink" : "border-b border-transparent"
+      }`}
+      style={
+        scrolled
+          ? undefined
+          : {
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 45%, rgba(0,0,0,0.35) 80%, transparent 100%)",
+            }
+      }
+    >
       <Container className="flex min-h-[3.75rem] items-center justify-between pt-2 pb-2.5 sm:h-20 sm:py-3">
         <a
           href="#top"

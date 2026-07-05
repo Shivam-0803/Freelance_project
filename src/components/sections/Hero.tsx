@@ -35,13 +35,13 @@ export function Hero() {
         />
       </div>
 
-      {/* Overlays for text legibility — left radial + bottom fade */}
+      {/* Overlays for text legibility — top/nav blend, left radial, bottom fade */}
       <div
         className="absolute inset-0 -z-10"
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(circle at left center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.18) 65%, transparent 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
+            "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 14%), radial-gradient(circle at left center, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.18) 65%, transparent 100%), linear-gradient(180deg, transparent 45%, oklch(10% 0.012 50 / 0.45) 100%)",
         }}
       />
 
